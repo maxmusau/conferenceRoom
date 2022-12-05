@@ -1,9 +1,10 @@
 # conferenceRoom
 Conference room Reservation Project
-##Recycler View - In this Project we create a Recycler using data from an online API,
-#RecyclerView is the ViewGroup that contains the views corresponding to your data. · Each individual element in the list is defined by a view holder object
+## Recycler View - In this Project we create a Recycler using data from an online API,
+# RecyclerView is the ViewGroup that contains the views corresponding to your data. · Each individual element in the list is defined by a view holder object
 #In the Project1 that we created, Open your build.gradle(Module) add below lines , these are dependancies we will need in our project
-#Glide will be used to Load images, Loopj will help us get data from our API and GSON to make data in the right format to be used by RecyclerAdapter
+
+# Glide will be used to Load images, Loopj will help us get data from our API and GSON to make data in the right format to be used by RecyclerAdapter
 dependencies {
      
     ..... 
@@ -12,7 +13,7 @@ dependencies {
     implementation "com.google.code.gson:gson:2.8.7"
     .....
 }
-#Create a New Kotlin Class Named Conference_Room.kt, put below code, this is a model that will define the data fields we will be working on.
+# Create a New Kotlin Class Named Conference_Room.kt, put below code, this is a model that will define the data fields we will be working on.
 class Confrerence_Room {
     var room_id : String = ""
     var room_name : String = ""
@@ -23,7 +24,7 @@ class Confrerence_Room {
     var image_url: String = ""
 
 }
-#Create a new XML layout under res - layout, name this XML single_item.xml, these files defines how our items will be displayed to the user.
+# Create a new XML layout under res - layout, name this XML single_item.xml, these files defines how our items will be displayed to the user.
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -156,7 +157,7 @@ class Confrerence_Room {
 
     </LinearLayout>
 </LinearLayout>
-#Below we create a Recycler adapter that will connect the XML file and the Model we created on Step 2 and 3, the Recycler adpater also will receive data coming from our API.
+# Below we create a Recycler adapter that will connect the XML file and the Model we created on Step 2 and 3, the Recycler adpater also will receive data coming from our API.
 package com.example.recycler
 import android.content.Context
 import android.content.Intent
@@ -226,7 +227,7 @@ class RecyclerAdapter(var context: Context)://When you want to toast smthg witho
         notifyDataSetChanged()
     }
 }//end class
-#Now Go to activity_main.xml and create a recycler View widget and a Progress Bar.
+# Now Go to activity_main.xml and create a recycler View widget and a Progress Bar.
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -253,7 +254,7 @@ class RecyclerAdapter(var context: Context)://When you want to toast smthg witho
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-#We now head to our MainActivity File and Get data from our API, we will be getting data from below API - (Application Programming Interface), this link will provide us data from a database.
+# We now head to our MainActivity File and Get data from our API, we will be getting data from below API - (Application Programming Interface), this link will provide us data from a database.
 (https://musau.pythonanywhere.com/getconferenceroom)
 
 #Open Your Main Activity and write this Code. Below code gets data from our API and pushes to the recycler adapter which maps the data to our XML.
@@ -329,9 +330,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = recyclerAdapter
     }
 }
-#Incase of errors with compatibilty issues with AndroidX add below file to gradle.properties add below line
+# Incase of errors with compatibilty issues with AndroidX add below file to gradle.properties add below line
 android.enableJetifier=true
-#You can also add Internet Permissions in AndroidManifest.xml.
+# You can also add Internet Permissions in AndroidManifest.xml.
   <uses-permission android:name="android.permission.INTERNET"/>
   
   
