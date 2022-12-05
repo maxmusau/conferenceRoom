@@ -157,7 +157,8 @@ class Confrerence_Room {
 
     </LinearLayout>
 </LinearLayout>
-## Below we create a Recycler adapter that will connect the XML file and the Model we created on Step 2 and 3, the Recycler adpater also will receive data coming from our API.
+
+##  Below we create a Recycler adapter that will connect the XML file and the Model we created on Step 2 and 3, the Recycler adpater also will receive data coming from our API.
 package com.example.recycler
 import android.content.Context
 import android.content.Intent
