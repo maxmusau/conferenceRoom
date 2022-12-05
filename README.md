@@ -26,9 +26,15 @@ class Confrerence_Room {
 }
 ## Create a new XML layout under res - layout, name this XML single_item.xml, these files defines how our items will be displayed to the user.
 
+
+
+
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              
     xmlns:tools="http://schemas.android.com/tools"
+              
     android:layout_width="match_parent"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp"
@@ -162,7 +168,9 @@ class Confrerence_Room {
 ##  Below we create a Recycler adapter that will connect the XML file and the Model we created on Step 2 and 3, the Recycler adpater also will receive data coming from our API.
 package com.example.recycler
 import android.content.Context
+
 import android.content.Intent
+
 import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
