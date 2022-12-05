@@ -25,6 +25,7 @@ class Confrerence_Room {
 
 }
 ## Create a new XML layout under res - layout, name this XML single_item.xml, these files defines how our items will be displayed to the user.
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
