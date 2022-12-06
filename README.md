@@ -1,10 +1,11 @@
-# conferenceRoom
+## conferenceRoom
 Conference room Reservation Project
 # Recycler View - In this Project we create a Recycler using data from an online API,
-## RecyclerView is the ViewGroup that contains the views corresponding to your data. · Each individual element in the list is defined by a view holder object
-#In the Project1 that we created, Open your build.gradle(Module) add below lines , these are dependancies we will need in our project
+# RecyclerView is the ViewGroup that contains the views corresponding to your data. · Each individual element in the list is defined by a view holder object
+## Step 1
+## In the Project1 that we created, Open your build.gradle(Module) add below lines , these are dependancies we will need in our project
 
-## Glide will be used to Load images, Loopj will help us get data from our API and GSON to make data in the right format to be used by RecyclerAdapter
+# Glide will be used to Load images, Loopj will help us get data from our API and GSON to make data in the right format to be used by RecyclerAdapter
      dependencies {
 
          ..... 
@@ -13,6 +14,7 @@ Conference room Reservation Project
          implementation "com.google.code.gson:gson:2.8.7"
          .....
      }
+## Step 2
 ## Create a New Kotlin Class Named Conference_Room.kt, put below code, this is a model that will define the data fields we will be working on.
      class Confrerence_Room {
          var room_id : String = ""
@@ -24,6 +26,7 @@ Conference room Reservation Project
          var image_url: String = ""
 
 }
+## Step 3
 ## Create a new XML layout under res - layout, name this XML single_item.xml, these files defines how our items will be displayed to the user.
 
 
@@ -164,7 +167,7 @@ Conference room Reservation Project
 
          </LinearLayout>
      </LinearLayout>
-
+## Step 4
 ##  Below we create a Recycler adapter that will connect the XML file and the Model we created on Step 2 and 3, the Recycler adpater also will receive data coming from our API.
           package com.example.recycler
           import android.content.Context
@@ -237,6 +240,7 @@ Conference room Reservation Project
                   notifyDataSetChanged()
               }
           }//end class
+## Step 5
 ## Now Go to activity_main.xml and create a recycler View widget and a Progress Bar.
      <?xml version="1.0" encoding="utf-8"?>
      <androidx.constraintlayout.widget.ConstraintLayout
@@ -264,10 +268,11 @@ Conference room Reservation Project
 
 
      </androidx.constraintlayout.widget.ConstraintLayout>
+## step 6
 ## We now head to our MainActivity File and Get data from our API, we will be getting data from below API - (Application Programming Interface), this link will provide us data from a database.
 (https://musau.pythonanywhere.com/getconferenceroom)
 
-## Open Your Main Activity and write this Code. Below code gets data from our API and pushes to the recycler adapter which maps the data to our XML.
+# Open Your Main Activity and write this Code. Below code gets data from our API and pushes to the recycler adapter which maps the data to our XML.
      import androidx.appcompat.app.AppCompatActivity
      import android.os.Bundle
      import android.view.View
@@ -340,14 +345,14 @@ Conference room Reservation Project
              recyclerView.adapter = recyclerAdapter
          }
      }
-## Incase of errors with compatibilty issues with AndroidX add below file to gradle.properties add below line
+# Incase of errors with compatibilty issues with AndroidX add below file to gradle.properties add below line
      android.enableJetifier=true
-## You can also add Internet Permissions in AndroidManifest.xml.
+# You can also add Internet Permissions in AndroidManifest.xml.
        <uses-permission android:name="android.permission.INTERNET"/>
   
   
   You are done, Run Your code on the device
-  
+## Step 7
 ## Creatibg a SingleAcitivity page to View a Single Conference room on click
 # Right click on app - New - Activity - Empty Activity. Give it a name SingleActivity - Finish
 # After Activity is created, head back to your recycler adapter and add below code inside onBindViewHolder function.
@@ -376,6 +381,8 @@ Conference room Reservation Project
              }
 
 # NB: above code must be put below Glide code in Your Adapter created in Step 4
+
+## Step 8
 ## Open the activity_single.xml and put below code, this code shows how a single item wil be displayed.
      <?xml version="1.0" encoding="utf-8"?>
      <LinearLayout
@@ -585,6 +592,7 @@ Conference room Reservation Project
 
      </LinearLayout>
 
+## step 9
 ## Open Your Single Activity.kt File and add below codes
      package com.example.project1
      import android.content.Context
